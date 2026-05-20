@@ -35,11 +35,12 @@ function LogoMark() {
 function AppleIcon() {
   return (
     <svg
-      viewBox="0 0 20 20"
+      viewBox="0 0 24 24"
       fill="currentColor"
-      className="w-5 h-5 flex-shrink-0"
+      className="w-6 h-6 flex-shrink-0"
+      aria-hidden="true"
     >
-      <path d="M15.12 10.72a4.52 4.52 0 002.15-3.8 4.52 4.52 0 00-2.7-4.12A4.57 4.57 0 0010 4.57a4.57 4.57 0 00-4.57-1.77A4.52 4.52 0 002.73 6.92a4.52 4.52 0 002.15 3.8A4.52 4.52 0 002.73 14.52 4.52 4.52 0 007.3 18.64a4.57 4.57 0 002.7.9 4.57 4.57 0 002.7-.9 4.52 4.52 0 004.57-4.12 4.52 4.52 0 00-2.15-3.8z" />
+      <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
     </svg>
   );
 }
@@ -47,12 +48,27 @@ function AppleIcon() {
 function PlayIcon() {
   return (
     <svg
-      viewBox="0 0 20 20"
-      fill="currentColor"
-      className="w-5 h-5 flex-shrink-0"
+      viewBox="0 0 40 44"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-6 h-6 flex-shrink-0"
+      aria-hidden="true"
     >
-      <path d="M10 2L3 7v6l7 5 7-5V7l-7-5z" opacity=".3" />
-      <path d="M10 2L3 7l7 5 7-5-7-5zM3 13l7 5v-5L3 8v5z" />
+      <path
+        d="M1.8 2.4c-.5.5-.8 1.2-.8 2.1v34.9c0 .9.3 1.6.8 2.1l20.6-20.6L1.8 2.4z"
+        fill="#4285F4"
+      />
+      <path
+        d="M21.7 22l6.8-7.4L6 1.7c-.6-.4-1.3-.6-2-.6-.8 0-1.6.3-2.2.8L21.7 22z"
+        fill="#34A853"
+      />
+      <path
+        d="M37.6 18.6L28 13.1l-7.3 6.5 7.3 6.5 9.6-5.5c.6-.4 1-1.1 1-1.9s-.4-1.5-1-2.1z"
+        fill="#FBBC04"
+      />
+      <path
+        d="M21.6 21.5L1.8 41.6c.6.5 1.4.8 2.2.8.7 0 1.4-.2 2-.6l22.4-12.9-6.8-7.4z"
+        fill="#EA4335"
+      />
     </svg>
   );
 }
@@ -600,7 +616,7 @@ export default function Page() {
           </h2>
           <p className="text-[15px] text-mu leading-[1.7] mb-6">
             Žinodamas, kad viskas eina teisinga linkme, jauti ramybę kiekvieną
-            dieną. Nebe spėlioji — žinai.
+            dieną. Nespėlioji — žinai.
           </p>
           <div className="flex flex-col gap-2.5">
             <Bullet color="g" icon="✓">
@@ -649,9 +665,6 @@ export default function Page() {
         className="max-w-[1140px] mx-auto py-16 md:py-[100px] px-5 md:px-[60px] pb-20"
       >
         <div className="text-center mb-12">
-          <div className="reveal inline-flex items-center gap-1.5 text-[11px] font-bold tracking-[.13em] uppercase text-ac mb-4">
-            👥 Kam skirta
-          </div>
           <h2 className="reveal text-[28px] md:text-[44px] font-extrabold tracking-[-.03em] mb-[14px]">
             Tu ir tavo gydytojas –<br />
             viena komanda
@@ -723,9 +736,6 @@ export default function Page() {
       {/* BENEFITS */}
       <div className="max-w-[1140px] mx-auto py-16 md:py-[100px] px-5 md:px-[60px]">
         <div className="text-center mb-11">
-          <div className="reveal inline-flex items-center gap-1.5 text-[11px] font-bold tracking-[.13em] uppercase text-ac mb-4">
-            📊 Ką gauni
-          </div>
           <h2 className="reveal text-[26px] md:text-[40px] font-extrabold tracking-[-.03em]">
             Viskas, ko reikia
             <br />
@@ -774,9 +784,6 @@ export default function Page() {
       {/* TESTIMONIALS */}
       <div className="max-w-[1140px] mx-auto py-16 md:py-[100px] px-5 md:px-[60px] overflow-visible">
         <div className="text-center mb-11">
-          <div className="reveal inline-flex items-center gap-1.5 text-[11px] font-bold tracking-[.13em] uppercase text-ac mb-4">
-            💬 Ką sako pacientai
-          </div>
           <h2 className="reveal text-[26px] md:text-[40px] font-extrabold tracking-[-.03em]">
             Jau padeda pacientams
           </h2>
@@ -792,9 +799,6 @@ export default function Page() {
         className="max-w-[860px] mx-auto py-16 md:py-[100px] px-5 md:px-[60px]"
       >
         <div className="text-center mb-11">
-          <div className="reveal inline-flex items-center gap-1.5 text-[11px] font-bold tracking-[.13em] uppercase text-ac mb-4">
-            ❓ DUK
-          </div>
           <h2 className="reveal text-[26px] md:text-[40px] font-extrabold tracking-[-.03em]">
             Dažni klausimai
           </h2>
@@ -806,9 +810,6 @@ export default function Page() {
 
       {/* CTA */}
       <div className="cta-radial py-16 md:py-[100px] px-5 md:px-[60px] text-center relative overflow-hidden border-t border-bd">
-        <div className="reveal inline-flex items-center justify-center gap-1.5 text-[11px] font-bold tracking-[.13em] uppercase text-ac mb-4">
-          🚀 Pradėk dabar
-        </div>
         <h2 className="reveal text-[32px] md:text-[56px] font-extrabold tracking-[-.04em] leading-[1.08] mb-[14px]">
           Nebespėliok. Žinok.
         </h2>
