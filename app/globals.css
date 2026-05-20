@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    background: #07070f;
+    color: #f0f0fa;
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  body::after {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='1'/%3E%3C/svg%3E");
+    opacity: .022;
+    pointer-events: none;
+    z-index: 9999;
+  }
+}
+
+@layer components {
+  .btn-ghost {
+    @apply h-12 px-5 bg-transparent border border-bd2 rounded-[10px] text-[13px] font-semibold text-tx cursor-pointer transition-colors;
+  }
+  .btn-ghost:hover { border-color: #5b7fff; }
+
+  .btn-cta {
+    @apply h-12 px-[22px] border-0 rounded-[10px] text-[13px] font-bold text-white cursor-pointer transition-all;
+    background: linear-gradient(135deg, #5b7fff, #8b5fff);
+    box-shadow: 0 4px 16px rgba(91,127,255,.35);
+  }
+  .btn-cta:hover { opacity: .88; transform: translateY(-1px); }
+
+  .dl-btn {
+    @apply inline-flex items-center gap-[10px] h-[52px] px-[22px] rounded-xl text-sm font-bold cursor-pointer transition-all no-underline min-w-[160px];
+  }
+  .dl-btn-dark {
+    @apply bg-white text-bg;
+    box-shadow: 0 4px 20px rgba(255,255,255,.08);
+  }
+  .dl-btn-dark:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(255,255,255,.15); }
+  .dl-btn-outline {
+    @apply bg-transparent text-tx;
+    border: 1.5px solid rgba(255,255,255,.14);
+  }
+  .dl-btn-outline:hover { border-color: rgba(255,255,255,.35); transform: translateY(-2px); }
+
+  .iphone {
+    @apply flex-shrink-0 relative overflow-hidden;
+    background: #111122;
+    border-radius: 38px;
+    border: 1.5px solid rgba(255,255,255,.12);
+    box-shadow: 0 32px 64px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.04) inset;
+  }
+  .iphone-glow {
+    border-color: rgba(91,127,255,.35);
+    box-shadow: 0 0 60px rgba(91,127,255,.18), 0 32px 64px rgba(0,0,0,.7);
+  }
+  .iphone-notch {
+    @apply h-[30px] w-[100px] mx-auto;
+    background: #07070f;
+    border-radius: 0 0 16px 16px;
+  }
+
+  .text-grad-tri {
+    background: linear-gradient(135deg, #5b7fff, #b06fff, #1ed98a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .text-grad-blue {
+    background: linear-gradient(135deg, #5b7fff, #8b5fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-radial::before {
+    content: '';
+    position: absolute;
+    width: 500px; height: 500px;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(ellipse, rgba(91,127,255,.12), transparent 65%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .feat-radial::before {
+    content: '';
+    position: absolute;
+    width: 360px; height: 360px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(91,127,255,.09), transparent 65%);
+    pointer-events: none;
+  }
+  .cta-radial::before {
+    content: '';
+    position: absolute;
+    width: 700px; height: 500px;
+    top: -100px; left: 50%;
+    transform: translateX(-50%);
+    background: radial-gradient(ellipse, rgba(91,127,255,.12), transparent 65%);
+    pointer-events: none;
+  }
+  .illus-top::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #5b7fff, transparent);
+    opacity: .5;
+  }
+  .aud-top::after {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #5b7fff, transparent);
+  }
+  .aud-top-green::after {
+    background: linear-gradient(90deg, transparent, #1ed98a, transparent);
+  }
+
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity .65s ease, transform .65s ease; }
+  .reveal.v { opacity: 1; transform: translateY(0); }
+  .reveal.d1 { transition-delay: .09s; }
+  .reveal.d2 { transition-delay: .18s; }
+  .reveal.d3 { transition-delay: .27s; }
+  .reveal.d4 { transition-delay: .36s; }
+}
