@@ -1,36 +1,7 @@
+import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
-
-function LogoMark() {
-  return (
-    <svg
-      viewBox="0 0 26 26"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-[26px] h-[26px]"
-    >
-      <rect width="26" height="26" rx="7" fill="url(#ng)" />
-      <path
-        d="M8 10c0-2.2 1.34-4 3.5-4 1 0 1.8.5 2.5.5S15.5 6 16.5 6C18.7 6 20 8 20 10c0 1.2-.4 3-1.2 5.5-.7 2.2-1.6 4-2.8 4-.8 0-1.2-.6-1.5-1.5-.3-.9-.6-1-.9-1s-.6.1-.9 1c-.3.9-.7 1.5-1.5 1.5-1.2 0-2.1-1.8-2.8-4C8.4 13 8 11.2 8 10z"
-        fill="white"
-      />
-      <defs>
-        <linearGradient
-          id="ng"
-          x1="0"
-          y1="0"
-          x2="26"
-          y2="26"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#5b7fff" />
-          <stop offset="1" stopColor="#8b5fff" />
-        </linearGradient>
-      </defs>
-    </svg>
-  );
-}
 
 function AppleIcon() {
   return (
@@ -144,7 +115,13 @@ export default function Page() {
           href="#"
           className="flex items-center gap-[9px] text-[17px] font-extrabold tracking-[-.03em] text-tx no-underline"
         >
-          <LogoMark />
+          <Image
+            src="/icon.webp"
+            alt="MyMouth"
+            width={26}
+            height={26}
+            className="rounded-[7px]"
+          />
           MyMouth
         </a>
         <ul className="hidden md:flex gap-7 list-none">
@@ -174,7 +151,7 @@ export default function Page() {
       <div className="max-w-[1140px] mx-auto px-5 md:px-[60px] pt-10 md:pt-20 pb-4 md:pb-0 grid md:grid-cols-[1fr_520px] gap-8 md:gap-[60px] items-center md:min-h-[calc(100vh-64px)]">
         <div className="text-center md:text-left">
           <div className="reveal inline-flex items-center gap-1.5 bg-ac/10 border border-ac/20 rounded-full px-[14px] py-[5px] text-[11px] font-bold text-[#8fa8ff] tracking-[.08em] uppercase mb-4 md:mb-[22px]">
-            🦷 Tavo gijimo gidas
+            Tavo gijimo gidas
           </div>
           <h1 className="reveal d1 font-extrabold tracking-[-.04em] leading-[1.06] mb-4 md:mb-5 text-[32px] sm:text-[44px] md:text-[62px]">
             Suprasi savo gijimą –<br />
@@ -319,7 +296,7 @@ export default function Page() {
         className="max-w-[1140px] mx-auto py-14 md:py-20 px-5 md:px-[60px] grid md:grid-cols-2 gap-10 md:gap-20 items-center"
       >
         <div className="reveal">
-          <FeatNum>02. PROBLEMA</FeatNum>
+          <FeatNum>1. PROBLEMA</FeatNum>
           <h2 className="text-[28px] md:text-[42px] font-extrabold tracking-[-.03em] leading-[1.1] mb-[14px]">
             Daug klausimų
             <br />
@@ -436,7 +413,7 @@ export default function Page() {
           </div>
         </div>
         <div className="reveal order-1 md:order-2">
-          <FeatNum>03. SPRENDIMAS</FeatNum>
+          <FeatNum>2. SPRENDIMAS</FeatNum>
           <h2 className="text-[28px] md:text-[42px] font-extrabold tracking-[-.03em] leading-[1.1] mb-[14px]">
             Aiškumas, kuris
             <br />
@@ -468,7 +445,7 @@ export default function Page() {
       {/* 4. NOTIFICATIONS */}
       <div className="max-w-[1140px] mx-auto py-14 md:py-20 px-5 md:px-[60px] grid md:grid-cols-2 gap-10 md:gap-20 items-center">
         <div className="reveal">
-          <FeatNum>04. NOTIFIKACIJOS</FeatNum>
+          <FeatNum>3. NOTIFIKACIJOS</FeatNum>
           <h2 className="text-[28px] md:text-[42px] font-extrabold tracking-[-.03em] leading-[1.1] mb-[14px]">
             Primename, kai
             <br />
@@ -572,7 +549,7 @@ export default function Page() {
           </div>
         </div>
         <div className="reveal order-1 md:order-2">
-          <FeatNum>05. DOKUMENTAI</FeatNum>
+          <FeatNum>4. DOKUMENTAI</FeatNum>
           <h2 className="text-[28px] md:text-[42px] font-extrabold tracking-[-.03em] leading-[1.1] mb-[14px]">
             Viskas vienoje
             <br />
@@ -608,7 +585,7 @@ export default function Page() {
       {/* 6. PEACE */}
       <div className="max-w-[1140px] mx-auto py-14 md:py-20 px-5 md:px-[60px] grid md:grid-cols-2 gap-10 md:gap-20 items-center">
         <div className="reveal">
-          <FeatNum>06. RAMYBĖ</FeatNum>
+          <FeatNum>5. RAMYBĖ</FeatNum>
           <h2 className="text-[28px] md:text-[42px] font-extrabold tracking-[-.03em] leading-[1.1] mb-[14px]">
             Mažiau streso.
             <br />
@@ -834,7 +811,16 @@ export default function Page() {
 
       {/* FOOTER */}
       <footer className="border-t border-bd py-7 px-5 md:px-[60px] flex flex-col md:flex-row justify-between items-center gap-3.5 text-center md:text-left">
-        <div className="text-[15px] font-bold text-mu2">🦷 MyMouth</div>
+        <div className="flex items-center gap-[7px] text-[15px] font-bold text-mu2">
+          <Image
+            src="/icon.webp"
+            alt="MyMouth"
+            width={20}
+            height={20}
+            className="rounded-[5px]"
+          />
+          MyMouth
+        </div>
         <div className="text-xs text-mu2">
           © 2025 MyMouth · Visos teisės saugomos
         </div>

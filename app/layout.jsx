@@ -19,6 +19,10 @@ export const metadata = {
   title: 'MyMouth — Suprasi savo gijimą kiekvieną dieną',
   description:
     'Aiškūs nurodymai, mažiau klaidų, daugiau ramybės. Programėlė, kuri veda per visą gijimo procesą po burnos chirurgijos.',
+  icons: {
+    icon: '/icon.webp',
+    apple: '/icon.webp',
+  },
 };
 
 export default function RootLayout({ children }) {
