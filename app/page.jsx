@@ -445,7 +445,7 @@ export default function Page() {
       {/* 4. NOTIFICATIONS */}
       <div className="max-w-[1140px] mx-auto py-14 md:py-20 px-5 md:px-[60px] grid md:grid-cols-2 gap-10 md:gap-20 items-center">
         <div className="reveal">
-          <FeatNum>3. NOTIFIKACIJOS</FeatNum>
+          <FeatNum>3. PRANEŠIMAI</FeatNum>
           <h2 className="text-[28px] md:text-[42px] font-extrabold tracking-[-.03em] leading-[1.1] mb-[14px]">
             Primename, kai
             <br />
