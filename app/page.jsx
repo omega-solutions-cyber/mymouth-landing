@@ -825,7 +825,7 @@ export default function Page() {
           © 2025 MyMouth · Visos teisės saugomos
         </div>
         <div className="flex gap-6">
-          {["Privatumas", "Sąlygos", "Instagram", "Facebook"].map((l) => (
+          {["Privatumas", "Sąlygos"].map((l) => (
             <a
               key={l}
               href="#"
