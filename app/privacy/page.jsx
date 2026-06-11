@@ -181,7 +181,7 @@ Asmens duomenys saugomi Bendrovės arba mūsų rangovų serveriuose, kurie yra �
       ["Teisė būti informuotam", "apie asmens duomenų tvarkymą."],
       ["Teisė susipažinti su duomenimis", "– patvirtinimas, ar tvarkome jūsų asmens duomenis, ir prieiga prie jų."],
       ["Teisė į klaidų ištaisymą", "– netikslių asmens duomenų ištaisymas."],
-      ["Teisė į ištrynimą", "(„teisė būti pamirštam") – tam tikrais atvejais."],
+      ["Teisė į ištrynimą", '(„teisė būti pamirštam") – tam tikrais atvejais.'],
       ["Teisė apriboti tvarkymą", "– tam tikromis aplinkybėmis."],
       ["Teisė į duomenų perkeliamumą", "– gauti jūsų duomenis struktūrizuotu, įprastu formatu."],
       ["Teisė nesutikti su tvarkymu", "– dėl konkrečios situacijos, ypač tiesioginės rinkodaros atveju."],

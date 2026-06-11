@@ -175,7 +175,7 @@ Vartotojas atsako už savo įvedamos informacijos tikslumą ir užtikrina, kad j
     subsections: [
       {
         id: "8.1",
-        title: "8.1. Paslaugos teikiamos „kaip yra"",
+        title: '8.1. Paslaugos teikiamos „kaip yra"',
         content: `Programelė teikiama „kaip yra" ir „kaip prieinama", be jokių tiesioginių ar numanomu garantijų. Bendrovė deda protingas pastangas užtikrinti, kad Programelė veiktų kaip numatyta, tačiau negarantuoja:`,
         list: [
           "Kad Programelė veiks nepertraukiamai, be klaidų ar visada bus prieinama.",
