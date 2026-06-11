@@ -821,14 +821,11 @@ export default function Page() {
           />
           MyMouth
         </div>
-        <div className="text-xs text-mu2">
-          © 2025 MyMouth · Visos teisės saugomos
-        </div>
         <div className="flex gap-6">
-          {["Privatumas", "Sąlygos"].map((l) => (
+          {[["Privatumas", "/privacy"], ["Sąlygos", "/terms"]].map(([l, href]) => (
             <a
               key={l}
-              href="#"
+              href={href}
               className="text-xs text-mu2 hover:text-tx no-underline transition-colors"
             >
               {l}
