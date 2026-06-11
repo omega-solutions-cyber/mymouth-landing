@@ -18,28 +18,27 @@ function AppleIcon() {
 
 function PlayIcon() {
   return (
-    <svg
-      viewBox="0 0 40 44"
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-6 h-6 flex-shrink-0"
-      aria-hidden="true"
-    >
-      <path
-        d="M1.8 2.4c-.5.5-.8 1.2-.8 2.1v34.9c0 .9.3 1.6.8 2.1l20.6-20.6L1.8 2.4z"
-        fill="#4285F4"
-      />
-      <path
-        d="M21.7 22l6.8-7.4L6 1.7c-.6-.4-1.3-.6-2-.6-.8 0-1.6.3-2.2.8L21.7 22z"
-        fill="#34A853"
-      />
-      <path
-        d="M37.6 18.6L28 13.1l-7.3 6.5 7.3 6.5 9.6-5.5c.6-.4 1-1.1 1-1.9s-.4-1.5-1-2.1z"
-        fill="#FBBC04"
-      />
-      <path
-        d="M21.6 21.5L1.8 41.6c.6.5 1.4.8 2.2.8.7 0 1.4-.2 2-.6l22.4-12.9-6.8-7.4z"
-        fill="#EA4335"
-      />
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.99 31.99" className="w-6 h-6 flex-shrink-0">
+      <g data-name="Capa 2">
+        <g data-name="Capa 1">
+          <path
+            d="M13.54 15.28.12 29.34a3.66 3.66 0 0 0 5.33 2.16l15.1-8.6Z"
+            style={{fill:"#ea4335"}}
+          />
+          <path
+            d="m27.11 12.89-6.53-3.74-7.35 6.45 7.38 7.28 6.48-3.7a3.54 3.54 0 0 0 1.5-4.79 3.62 3.62 0 0 0-1.5-1.5z"
+            style={{fill:"#fbbc04"}}
+          />
+          <path
+            d="M.12 2.66a3.57 3.57 0 0 0-.12.92v24.84a3.57 3.57 0 0 0 .12.92L14 15.64Z"
+            style={{fill:"#4285f4"}}
+          />
+          <path
+            d="m13.64 16 6.94-6.85L5.5.51A3.73 3.73 0 0 0 3.63 0 3.64 3.64 0 0 0 .12 2.65Z"
+            style={{fill:"#34a853"}}
+          />
+        </g>
+      </g>
     </svg>
   );
 }
@@ -58,7 +57,7 @@ function DownloadButtons({ centered }) {
         <AppleIcon />
         <span className="flex flex-col leading-tight">
           <span className="text-[10px] font-normal opacity-70">
-            Atsisiųsk iš
+            Atsisiųsti iš
           </span>
           <span>App Store</span>
         </span>
@@ -69,7 +68,9 @@ function DownloadButtons({ centered }) {
       >
         <PlayIcon />
         <span className="flex flex-col leading-tight">
-          <span className="text-[10px] font-normal opacity-70">Gauti iš</span>
+          <span className="text-[10px] font-normal opacity-70">
+            Atsisiųsti iš
+          </span>
           <span>Google Play</span>
         </span>
       </a>
@@ -173,25 +174,24 @@ export default function Page() {
                 fill="#1ed98a"
               />
             </svg>
-            Saugūs duomenys. Sukurta kartu su odontologais.
+            Saugūs duomenys. Sukurta kartu su odontologais ir burnos chirurgais.
           </div>
         </div>
 
         <div className="reveal d2 relative flex items-end justify-center md:justify-start gap-4 hero-radial">
           <div className="iphone iphone-glow relative z-[2] w-[220px] md:w-[260px]">
-            <div className="iphone-notch" />
             <div className="px-[14px] pt-3 pb-[18px]">
-              <div className="text-[9px] font-bold tracking-[.08em] uppercase text-ac mb-1.5">
-                📅 DIENOS PLANAS
+              <div className="flex justify-center mb-[10px]">
+                <div className="inline-flex items-center gap-1.5 bg-ac/10 border border-ac/25 rounded-[20px] px-[10px] py-[3px] text-[10px] font-bold text-ac">
+                  3 Diena
+                </div>
               </div>
-              <div className="inline-flex items-center gap-1.5 bg-ac/10 border border-ac/25 rounded-[20px] px-[10px] py-[3px] text-[10px] font-bold text-ac mb-[10px]">
-                Day 3
-              </div>
+
               <div className="bg-gr/10 border border-gr/20 rounded-[10px] px-[10px] py-2 mb-1.5 text-[10px] text-gr">
                 ✓ Tinimas gali būti didžiausias – tai normalu
               </div>
               <div className="bg-rd/10 border border-rd/20 rounded-[10px] px-[10px] py-2 mb-1.5 text-[10px] text-[#ff8899]">
-                ✗ Venk kramtymo operuota puse
+                ✗ Vengti kramtymo operuota puse
               </div>
               <div className="bg-white/[.04] rounded-[10px] px-[11px] py-[9px] mb-[7px]">
                 <div className="text-[9px] text-mu mb-1.5">Priminimas</div>
@@ -217,10 +217,10 @@ export default function Page() {
                   </div>
                   <div className="flex-1">
                     <div className="text-[10px] font-semibold leading-tight">
-                      Stebėk
+                      Kaip jaučiatės šiandien?
                     </div>
                     <div className="text-[9px] text-mu">
-                      Žinok, kada viskas normalu
+                      Pasitikrinkite bendra būklę
                     </div>
                   </div>
                   <div className="text-[11px] text-gr">›</div>
@@ -230,9 +230,8 @@ export default function Page() {
           </div>
 
           <div className="iphone hidden md:block w-[200px] opacity-55 translate-y-8 relative z-[1]">
-            <div className="iphone-notch" />
             <div className="px-[14px] pt-3 pb-[18px]">
-              <div className="text-[9px] font-bold tracking-[.08em] uppercase text-ac mb-1.5">
+              <div className="text-[9px] font-bold tracking-[.08em] uppercase text-ac mb-1.5 text-center">
                 🔔 PRIMINIMAI
               </div>
               <div className="bg-card border border-ac/20 rounded-xl px-3 py-[10px] mb-2">
@@ -306,29 +305,11 @@ export default function Page() {
             Nerimas, spėliojimas ir klaidos gali sulėtinti gijimą. Dauguma
             pacientų nežino, kas normalu.
           </p>
-          <div className="flex flex-col gap-2.5">
-            <Bullet color="r" icon="?">
-              <strong className="text-tx">Ar normalu, kad skauda?</strong> —
-              Nežino ribos tarp normos ir komplikacijos
-            </Bullet>
-            <Bullet color="y" icon="!">
-              <strong className="text-tx">Ar jau galima kramtyti?</strong> —
-              Padaro klaidas, kurios gadina gijimą
-            </Bullet>
-            <Bullet color="r" icon="?">
-              <strong className="text-tx">Ar viskas gyja gerai?</strong> —
-              Nerimas dėl kiekvieno pojūčio
-            </Bullet>
-            <Bullet color="y" icon="!">
-              <strong className="text-tx">Pamiršta vaistus</strong> —
-              Antibiotikų kursas nutraukiamas per anksti
-            </Bullet>
-          </div>
         </div>
         <div className="reveal d1 flex justify-center items-center relative feat-radial">
           <div className="illus-top relative bg-bg3 border border-bd2 rounded-[20px] p-7 overflow-hidden z-[1] w-full min-h-[320px] flex flex-col gap-3">
             <div className="text-[11px] font-bold text-mu tracking-[.08em] uppercase mb-1">
-              Klausimas po operacijos
+              Klausimai po operacijos
             </div>
             {[
               "Ar normalu, kad skauda?",
@@ -337,13 +318,13 @@ export default function Page() {
             ].map((q) => (
               <div
                 key={q}
-                className="bg-rd/10 border border-rd/20 rounded-[14px] rounded-bl-[4px] px-4 py-3 max-w-[80%]"
+                className="bg-yw/10 border border-yw/20 rounded-[14px] rounded-bl-[4px] px-4 py-3 max-w-[80%]"
               >
-                <div className="text-sm text-[#ff8899]">{q}</div>
+                <div className="text-sm text-yw">{q}</div>
               </div>
             ))}
             <div className="mt-2 p-[14px] bg-card rounded-xl flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-[10px] bg-rd/15 flex items-center justify-center text-lg flex-shrink-0">
+              <div className="w-9 h-9 rounded-[10px] bg-yw/15 flex items-center justify-center text-lg flex-shrink-0">
                 😟
               </div>
               <div>
@@ -368,13 +349,12 @@ export default function Page() {
       >
         <div className="reveal d1 order-2 md:order-1 flex justify-center items-center relative feat-radial">
           <div className="iphone iphone-glow w-[240px]">
-            <div className="iphone-notch" />
             <div className="px-[14px] pt-3 pb-[18px]">
-              <div className="text-[9px] font-bold tracking-[.08em] uppercase text-ac mb-1.5">
+              <div className="text-[9px] font-bold tracking-[.08em] uppercase text-ac mb-1.5 text-center">
                 KAS ŠIANDIEN SVARBU
               </div>
               <div className="bg-gr/10 border border-gr/20 rounded-[10px] px-[10px] py-2 mb-1.5 text-[10px] text-gr">
-                ✓ Venk kramtymo operuota puse
+                ✓ Vengti fizinio krūvio
               </div>
               <div className="bg-gr/10 border border-gr/20 rounded-[10px] px-[10px] py-2 mb-1.5 text-[10px] text-gr">
                 ✓ Gali jaustis tinimas — normalu
@@ -425,7 +405,7 @@ export default function Page() {
           </p>
           <div className="flex flex-col gap-2.5">
             <Bullet color="g" icon="✓">
-              <strong className="text-tx">Kas šiandien svarbu</strong> — venk
+              <strong className="text-tx">Kas šiandien svarbu</strong> — vengti
               kramtymo operuota puse ir fizinio krūvio
             </Bullet>
             <Bullet color="g" icon="✓">
@@ -472,9 +452,8 @@ export default function Page() {
         </div>
         <div className="reveal d1 flex justify-center items-center relative feat-radial">
           <div className="iphone w-[230px] relative z-[1]">
-            <div className="iphone-notch" />
             <div className="px-[14px] pt-3 pb-[18px]">
-              <div className="text-[9px] font-bold tracking-[.08em] uppercase text-ac mb-1.5">
+              <div className="text-[9px] font-bold tracking-[.08em] uppercase text-ac mb-1.5 text-center">
                 🔔 PRIMINIMAI
               </div>
               <div className="bg-card border border-ac/20 rounded-xl px-3 py-[10px] mb-2">
@@ -509,11 +488,11 @@ export default function Page() {
       <div className="max-w-[1140px] mx-auto py-14 md:py-20 px-5 md:px-[60px] grid md:grid-cols-2 gap-10 md:gap-20 items-center">
         <div className="reveal d1 order-2 md:order-1 flex justify-center items-center relative feat-radial">
           <div className="iphone iphone-glow w-[250px]">
-            <div className="iphone-notch" />
             <div className="px-[14px] pt-3 pb-[18px]">
-              <div className="text-[11px] font-bold text-tx mb-3">
-                ‹ Mano dokumentai
+              <div className="text-[11px] font-bold text-tx mb-3 text-center">
+                Mano dokumentai
               </div>
+
               {[
                 ["🦷", "Implanto pasas", "Straumann · 14.05.2024", "bg-ac/15"],
                 ["🩻", "Rentgeno nuotraukos", "3 failai", "bg-rd/10"],
@@ -620,8 +599,8 @@ export default function Page() {
               Gijimas juda teisinga linkme. Šiandien nėra ko nerimauti.
             </div>
             <div className="flex flex-col gap-2 w-full max-w-[260px] mt-2">
-              <div className="bg-gr/10 border border-gr/20 rounded-[10px] px-[14px] py-2.5 flex items-center gap-2 text-[13px] text-gr">
-                <span>✓</span> Tinimas mažėja — D+3 tai normalu
+              <div className="bg-gr/10 border border-gr/20 rounded-[10px] px-[14px] py-2.5 flex items-center gap-2 text-[13px] text-gr text-start">
+                <span>✓</span> Tinimas mažėja — 3 dieną tai normalu
               </div>
               <div className="bg-gr/10 border border-gr/20 rounded-[10px] px-[14px] py-2.5 flex items-center gap-2 text-[13px] text-gr">
                 <span>✓</span> Antibiotikai vartojami laiku
@@ -822,7 +801,10 @@ export default function Page() {
           MyMouth
         </div>
         <div className="flex gap-6">
-          {[["Privatumas", "/privacy"], ["Sąlygos", "/terms"]].map(([l, href]) => (
+          {[
+            ["Privatumas", "/privacy"],
+            ["Sąlygos", "/terms"],
+          ].map(([l, href]) => (
             <a
               key={l}
               href={href}
