@@ -541,7 +541,7 @@ export default function Page() {
           <div className="flex flex-col gap-2.5">
             <Bullet color="b" icon="🦷">
               <strong className="text-tx">Implanto pasas</strong> — gamintojas,
-              modelis, serijos numeris, garantija
+              modelis, serijos numeris
             </Bullet>
             <Bullet color="b" icon="🩻">
               <strong className="text-tx">Rentgeno nuotraukos</strong> — prieš
@@ -580,8 +580,8 @@ export default function Page() {
               dienų praėjo ir kas laukia toliau
             </Bullet>
             <Bullet color="g" icon="✓">
-              <strong className="text-tx">Mažiau klaidų</strong> — programėlė
-              apsaugo nuo dažniausių gijimo klaidų
+              <strong className="text-tx">Mažiau klaidų</strong> — padeda
+              išvengti dažniausių gijimo klaidų
             </Bullet>
             <Bullet color="g" icon="✓">
               <strong className="text-tx">Gydytojas šalia</strong> — jo
