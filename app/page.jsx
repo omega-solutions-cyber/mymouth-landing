@@ -172,7 +172,7 @@ export default function Page() {
       </nav>
 
       {/* HERO */}
-      <div className="max-w-[1140px] mx-auto px-5 md:px-[60px] pt-10 md:pt-20 pb-8 md:pb-20 grid md:grid-cols-[1fr_520px] gap-8 md:gap-[60px] items-center">
+      <div className="max-w-[1140px] mx-auto px-5 md:px-[60px] pt-10 md:pt-0 pb-8 md:pb-0 md:min-h-[calc(100vh-4rem)] grid md:grid-cols-[1fr_520px] gap-8 md:gap-[60px] items-center">
         <div className="text-center md:text-left order-2 md:order-none md:col-start-1">
           <h1 className="reveal d1 font-extrabold tracking-[-.04em] leading-[1.06] mb-4 md:mb-5 text-[32px] sm:text-[44px] md:text-[62px]">
             Suprasi savo gijimą
