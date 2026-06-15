@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; overflow-x: clip; }
   body {
     background: #07070f;
     color: #f0f0fa;

@@ -18,24 +18,28 @@ function AppleIcon() {
 
 function PlayIcon() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.99 31.99" className="w-6 h-6 flex-shrink-0">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 28.99 31.99"
+      className="w-6 h-6 flex-shrink-0"
+    >
       <g data-name="Capa 2">
         <g data-name="Capa 1">
           <path
             d="M13.54 15.28.12 29.34a3.66 3.66 0 0 0 5.33 2.16l15.1-8.6Z"
-            style={{fill:"#ea4335"}}
+            style={{ fill: "#ea4335" }}
           />
           <path
             d="m27.11 12.89-6.53-3.74-7.35 6.45 7.38 7.28 6.48-3.7a3.54 3.54 0 0 0 1.5-4.79 3.62 3.62 0 0 0-1.5-1.5z"
-            style={{fill:"#fbbc04"}}
+            style={{ fill: "#fbbc04" }}
           />
           <path
             d="M.12 2.66a3.57 3.57 0 0 0-.12.92v24.84a3.57 3.57 0 0 0 .12.92L14 15.64Z"
-            style={{fill:"#4285f4"}}
+            style={{ fill: "#4285f4" }}
           />
           <path
             d="m13.64 16 6.94-6.85L5.5.51A3.73 3.73 0 0 0 3.63 0 3.64 3.64 0 0 0 .12 2.65Z"
-            style={{fill:"#34a853"}}
+            style={{ fill: "#34a853" }}
           />
         </g>
       </g>
@@ -83,6 +87,25 @@ function FeatNum({ children }) {
     <div className="font-mono text-[11px] font-medium text-ac tracking-[.12em] mb-[14px] bg-ac/10 border border-ac/20 rounded-md px-[10px] py-[3px] inline-block">
       {children}
     </div>
+  );
+}
+
+function SFIcon({ name, className = "w-4 h-4" }) {
+  return (
+    <span
+      className={`block ${className}`}
+      style={{
+        maskImage: `url(/icons/${name}.svg)`,
+        WebkitMaskImage: `url(/icons/${name}.svg)`,
+        maskSize: "contain",
+        WebkitMaskSize: "contain",
+        maskRepeat: "no-repeat",
+        WebkitMaskRepeat: "no-repeat",
+        maskPosition: "center",
+        WebkitMaskPosition: "center",
+        backgroundColor: "currentColor",
+      }}
+    />
   );
 }
 
@@ -149,108 +172,109 @@ export default function Page() {
       </nav>
 
       {/* HERO */}
-      <div className="max-w-[1140px] mx-auto px-5 md:px-[60px] pt-10 md:pt-20 pb-4 md:pb-0 grid md:grid-cols-[1fr_520px] gap-8 md:gap-[60px] items-center md:min-h-[calc(100vh-64px)]">
-        <div className="text-center md:text-left">
-          <div className="reveal inline-flex items-center gap-1.5 bg-ac/10 border border-ac/20 rounded-full px-[14px] py-[5px] text-[11px] font-bold text-[#8fa8ff] tracking-[.08em] uppercase mb-4 md:mb-[22px]">
-            Tavo gijimo gidas
-          </div>
+      <div className="max-w-[1140px] mx-auto px-5 md:px-[60px] pt-10 md:pt-20 pb-8 md:pb-20 grid md:grid-cols-[1fr_520px] gap-8 md:gap-[60px] items-center">
+        <div className="text-center md:text-left order-2 md:order-none md:col-start-1">
           <h1 className="reveal d1 font-extrabold tracking-[-.04em] leading-[1.06] mb-4 md:mb-5 text-[32px] sm:text-[44px] md:text-[62px]">
-            Suprasi savo gijimą –<br />
+            Suprasi savo gijimą
+            <br />
             <em className="not-italic text-grad-tri">kiekvieną dieną</em>
           </h1>
           <p className="reveal d2 text-[15px] md:text-[17px] text-mu max-w-[480px] mx-auto md:mx-0 leading-[1.6] md:leading-[1.65] mb-6 md:mb-8 font-normal">
             Aiškūs nurodymai, mažiau klaidų, daugiau ramybės. Programėlė, kuri
-            veda per visą gijimo procesą po burnos chirurgijos.
+            lydi per visą gijimo procesą po burnos chirurgijos procedurų.
           </p>
           <DownloadButtons />
-          <div className="reveal d4 flex items-center justify-center md:justify-start gap-1.5 text-xs text-mu2 mt-4">
-            <svg
-              viewBox="0 0 14 14"
-              fill="none"
-              className="w-[14px] h-[14px] flex-shrink-0"
-            >
-              <path
-                d="M7 1l1.5 3.5 4 .3-3 2.7.9 4L7 9.3 3.6 11.5l.9-4-3-2.7 4-.3z"
-                fill="#1ed98a"
-              />
-            </svg>
-            Saugūs duomenys. Sukurta kartu su odontologais ir burnos chirurgais.
+          <div className="reveal d4 text-xs text-mu2 mt-4 text-center md:text-left">
+            Saugūs duomenys. Sukurta bendradarbiaujant su odontologais ir burnos
+            chirurgais.
           </div>
         </div>
 
-        <div className="reveal d2 relative flex items-end justify-center md:justify-start gap-4 hero-radial">
-          <div className="iphone iphone-glow relative z-[2] w-[220px] md:w-[260px]">
-            <div className="px-[14px] pt-3 pb-[18px]">
-              <div className="flex justify-center mb-[10px]">
-                <div className="inline-flex items-center gap-1.5 bg-ac/10 border border-ac/25 rounded-[20px] px-[10px] py-[3px] text-[10px] font-bold text-ac">
-                  3 Diena
+        <div className="reveal d2 relative mx-auto md:mx-0 w-[280px] md:w-[460px] hero-radial order-1 md:order-none md:col-start-2">
+          {/* Phone 1 — in-flow, drives container height */}
+          <div className="iphone iphone-glow relative z-[2] w-[195px] md:w-[300px]">
+            <div className="px-[14px] md:px-5 pt-4 md:pt-6 pb-[18px] md:pb-7">
+              <div className="flex justify-center mb-2 md:mb-3">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-ac flex items-center justify-center">
+                  <svg viewBox="0 0 16 16" fill="none" className="w-5 h-5 md:w-6 md:h-6">
+                    <path
+                      d="M3 8l3.5 3.5L13 5"
+                      stroke="white"
+                      strokeWidth="2.2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
                 </div>
               </div>
-
-              <div className="bg-gr/10 border border-gr/20 rounded-[10px] px-[10px] py-2 mb-1.5 text-[10px] text-gr">
-                ✓ Tinimas gali būti didžiausias – tai normalu
+              <div className="text-center text-[12px] md:text-[15px] font-extrabold mb-3 md:mb-4 leading-tight tracking-[-.02em]">
+                Gijimas juda į priekį!
               </div>
-              <div className="bg-rd/10 border border-rd/20 rounded-[10px] px-[10px] py-2 mb-1.5 text-[10px] text-[#ff8899]">
-                ✗ Vengti kramtymo operuota puse
-              </div>
-              <div className="bg-white/[.04] rounded-[10px] px-[11px] py-[9px] mb-[7px]">
-                <div className="text-[9px] text-mu mb-1.5">Priminimas</div>
-                <div className="flex items-center gap-2 py-1">
-                  <div className="w-7 h-7 rounded-lg bg-ac/15 flex items-center justify-center text-[13px] flex-shrink-0">
-                    🔔
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-[10px] font-semibold leading-tight">
-                      20:00 · Antibiotikai
+              <div className="bg-white/[.06] border border-white/[.10] rounded-[10px] px-3 md:px-4 py-2.5 md:py-3 mb-2 md:mb-3">
+                <div className="flex items-start gap-2 md:gap-3">
+                  <span className="text-[11px] md:text-[14px] flex-shrink-0 mt-0.5">💡</span>
+                  <div>
+                    <div className="text-[9px] md:text-[12px] font-bold text-tx leading-[1.4] mb-0.5">
+                      Patinimas 3–ią dieną — normalu.
                     </div>
-                    <div className="text-[9px] text-mu">
-                      Svarbu vartoti reguliariai
+                    <div className="text-[9px] md:text-[11px] text-mu leading-[1.5]">
+                      Didžiausias būna 2–3 dieną ir palaipsniui mažėja. Šaltas kompresas padės.
                     </div>
                   </div>
-                  <div className="text-[11px] text-gr">○</div>
                 </div>
               </div>
-              <div className="bg-white/[.04] rounded-[10px] px-[11px] py-[9px]">
-                <div className="flex items-center gap-2 py-1">
-                  <div className="w-7 h-7 rounded-lg bg-gr/15 flex items-center justify-center text-[13px] flex-shrink-0">
-                    ❤️
+              <div className="bg-white/[.04] border border-white/[.06] rounded-[10px] overflow-hidden">
+                {[
+                  ["😣", "Skausmas", "Vidutiniškai", "bg-yw/20 text-yw"],
+                  ["🤢", "Patinimas", "Labai", "bg-rd/20 text-[#ff8899]"],
+                  ["🩸", "Kraujavimas", "Visai ne", "bg-gr/20 text-gr"],
+                  ["😊", "Savijauta", "Nebloga", "bg-ac/20 text-ac"],
+                ].map(([ico, label, val, cls], i, arr) => (
+                  <div
+                    key={label}
+                    className={`flex items-center gap-2 md:gap-3 px-3 md:px-4 py-[7px] md:py-[10px] ${
+                      i < arr.length - 1 ? "border-b border-white/[.05]" : ""
+                    }`}
+                  >
+                    <span className="text-[11px] md:text-[14px] flex-shrink-0">{ico}</span>
+                    <span className="flex-1 text-[9px] md:text-[12px] text-tx font-medium">
+                      {label}
+                    </span>
+                    <span
+                      className={`text-[8px] md:text-[11px] font-semibold px-[7px] md:px-[9px] py-[3px] md:py-1 rounded-full ${cls}`}
+                    >
+                      {val}
+                    </span>
                   </div>
-                  <div className="flex-1">
-                    <div className="text-[10px] font-semibold leading-tight">
-                      Kaip jaučiatės šiandien?
-                    </div>
-                    <div className="text-[9px] text-mu">
-                      Pasitikrinkite bendra būklę
-                    </div>
-                  </div>
-                  <div className="text-[11px] text-gr">›</div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
 
-          <div className="iphone hidden md:block w-[200px] opacity-55 translate-y-8 relative z-[1]">
+          {/* Phone 2 — always absolute, overlaps phone1 from bottom-right */}
+          <div className="iphone absolute right-0 bottom-0 md:bottom-4 w-[130px] md:w-[200px] opacity-55 z-[1]">
             <div className="px-[14px] pt-3 pb-[18px]">
-              <div className="text-[9px] font-bold tracking-[.08em] uppercase text-ac mb-1.5 text-center">
-                🔔 PRIMINIMAI
+              <div className="flex items-center justify-center gap-1 text-[9px] font-bold tracking-[.08em] uppercase text-ac mb-1.5">
+                <SFIcon name="bell.fill" className="w-[9px] h-[9px]" />
+                <span>PRIMINIMAI</span>
               </div>
               <div className="bg-card border border-ac/20 rounded-xl px-3 py-[10px] mb-2">
+                <div className="text-[10px] text-mu font-medium mb-0.5">
+                  Vizitas
+                </div>
+                <div className="text-[11px] text-tx leading-[1.4]">
+                  Laikas užsiregistruoti
+                </div>
+                <div className="text-[10px] text-mu mt-1">
+                  Gijimo galvutės uždėjimas
+                </div>
+              </div>
+              <div className="bg-card border border-ac/20 rounded-xl px-3 py-[10px]">
                 <div className="font-mono text-[10px] text-ac font-medium">
                   20:00
                 </div>
                 <div className="text-[11px] text-tx mt-0.5 leading-[1.4]">
                   Laikas išgerti antibiotikus
-                </div>
-                <div className="text-[10px] text-mu mt-1">
-                  Svarbu vartoti reguliariai, net jei jautiesi gerai
-                </div>
-              </div>
-              <div className="bg-card border border-ac/20 rounded-xl px-3 py-[10px]">
-                <div className="font-mono text-[10px] text-ac font-medium">
-                  08:00
-                </div>
-                <div className="text-[11px] text-tx mt-0.5 leading-[1.4]">
-                  Rytinis antibiotikų priminimas
                 </div>
               </div>
             </div>
@@ -259,35 +283,6 @@ export default function Page() {
       </div>
 
       <div className="h-10 md:h-20" />
-      <hr className="border-0 h-px bg-bd m-0" />
-
-      {/* STATS */}
-      <div className="bg-bg2 border-t border-b border-bd grid grid-cols-2 md:grid-cols-4">
-        {[
-          ["10", "Dienų kasdieniai\npatikrinimai"],
-          ["4", "Palaikomos chirurginės\nprocedūros"],
-          ["100%", "Personalizuota\ninformacija"],
-          ["0€", "Nemokama\npacientams"],
-        ].map(([n, l], i) => {
-          const classes = ["reveal", "text-center", "py-9", "px-5"];
-          if (i > 0) classes.push(`d${i}`);
-          // mobile (2 cols): cells in left column (i=0,2) get right border; cells in top row (i=0,1) get bottom border
-          if (i % 2 === 0) classes.push("border-r", "border-bd");
-          if (i < 2) classes.push("border-b", "border-bd", "md:border-b-0");
-          // desktop (4 cols): all but last get right border
-          if (i < 3) classes.push("md:border-r", "md:border-bd");
-          return (
-            <div key={i} className={classes.join(" ")}>
-              <div className="text-[28px] md:text-[32px] font-extrabold tracking-[-.03em] leading-none mb-1.5 text-grad-blue">
-                {n}
-              </div>
-              <div className="text-xs text-mu leading-[1.4] whitespace-pre-line">
-                {l}
-              </div>
-            </div>
-          );
-        })}
-      </div>
 
       {/* 2. PROBLEM */}
       <div
@@ -313,8 +308,8 @@ export default function Page() {
             </div>
             {[
               "Ar normalu, kad skauda?",
-              "Ar jau galima kramtyti?",
-              "Ar viskas gyja gerai?",
+              "Koks sekantis etapas?",
+              "Kas bus toliau?",
             ].map((q) => (
               <div
                 key={q}
@@ -364,8 +359,8 @@ export default function Page() {
               </div>
               <div className="h-2.5" />
               <div className="flex items-center gap-2 py-2 border-b border-white/[.05]">
-                <div className="w-7 h-7 rounded-lg bg-ac/15 flex items-center justify-center text-[13px] flex-shrink-0">
-                  🔔
+                <div className="w-7 h-7 rounded-lg bg-yw/15 text-yw flex items-center justify-center flex-shrink-0">
+                  <SFIcon name="bell.fill" className="w-3.5 h-3.5" />
                 </div>
                 <div className="flex-1">
                   <div className="text-[10px] font-semibold leading-tight">
@@ -373,11 +368,11 @@ export default function Page() {
                   </div>
                   <div className="text-[9px] text-mu">20:00 · Antibiotikai</div>
                 </div>
-                <div className="text-[11px] text-gr">○</div>
+                <div className="text-[11px] text-mu2">○</div>
               </div>
               <div className="flex items-center gap-2 py-2">
-                <div className="w-7 h-7 rounded-lg bg-gr/15 flex items-center justify-center text-[13px] flex-shrink-0">
-                  ❤️
+                <div className="w-7 h-7 rounded-lg bg-gr/15 text-gr flex items-center justify-center flex-shrink-0">
+                  <SFIcon name="heart.fill" className="w-3.5 h-3.5" />
                 </div>
                 <div className="flex-1">
                   <div className="text-[10px] font-semibold leading-tight">
@@ -387,7 +382,7 @@ export default function Page() {
                     Žinok, kada viskas normalu
                   </div>
                 </div>
-                <div className="text-[11px] text-gr">›</div>
+                <div className="text-[11px] text-mu2">›</div>
               </div>
             </div>
           </div>
@@ -397,7 +392,7 @@ export default function Page() {
           <h2 className="text-[28px] md:text-[42px] font-extrabold tracking-[-.03em] leading-[1.1] mb-[14px]">
             Aiškumas, kuris
             <br />
-            veda kiekvieną dieną
+            lydi kiekvieną dieną
           </h2>
           <p className="text-[15px] text-mu leading-[1.7] mb-6">
             Gauk aiškius atsakymus ir tiksliai žinok, ką daryti. Kasdieniai
@@ -433,18 +428,18 @@ export default function Page() {
           </h2>
           <p className="text-[15px] text-mu leading-[1.7] mb-6">
             Laiku gausi priminimus apie vaistus, higieną ir svarbius veiksmus.
-            Nereikia nieko atsiminti.
+            Primename tai, kas labiausiai pasimirsta.
           </p>
           <div className="flex flex-col gap-2.5">
-            <Bullet color="b" icon="💊">
+            <Bullet color="b" icon={<SFIcon name="pills.fill" className="w-3 h-3" />}>
               <strong className="text-tx">Antibiotikų priminimai</strong> — du
               kartus per dieną, tiksliu laiku
             </Bullet>
-            <Bullet color="y" icon="⏰">
+            <Bullet color="y" icon={<SFIcon name="clock.fill" className="w-3 h-3" />}>
               <strong className="text-tx">Higienos priminimai</strong> — kada
               pradėti skalauti, kaip valyti
             </Bullet>
-            <Bullet color="g" icon="📅">
+            <Bullet color="g" icon={<SFIcon name="calendar" className="w-3 h-3" />}>
               <strong className="text-tx">Vizitų priminimai</strong> — gijimo
               galvutės uždėjimas, karūnėlė
             </Bullet>
@@ -453,8 +448,9 @@ export default function Page() {
         <div className="reveal d1 flex justify-center items-center relative feat-radial">
           <div className="iphone w-[230px] relative z-[1]">
             <div className="px-[14px] pt-3 pb-[18px]">
-              <div className="text-[9px] font-bold tracking-[.08em] uppercase text-ac mb-1.5 text-center">
-                🔔 PRIMINIMAI
+              <div className="flex items-center justify-center gap-1 text-[9px] font-bold tracking-[.08em] uppercase text-ac mb-1.5">
+                <SFIcon name="bell.fill" className="w-[9px] h-[9px]" />
+                <span>PRIMINIMAI</span>
               </div>
               <div className="bg-card border border-ac/20 rounded-xl px-3 py-[10px] mb-2">
                 <div className="font-mono text-[28px] font-medium text-tx tracking-[-.02em] my-1">
@@ -470,12 +466,92 @@ export default function Page() {
                   Svarbu vartoti reguliariai, net jei jautiesi gerai
                 </div>
               </div>
-              <div className="bg-card border border-ac/20 rounded-xl px-3 py-[10px]">
-                <div className="text-[10px] text-mu mb-0.5">Rytinis</div>
+              <div className="bg-card border border-gr/20 rounded-xl px-3 py-[10px]">
+                <div className="text-[10px] text-mu mb-0.5">Vizitas</div>
                 <div className="text-[11px] font-semibold text-tx mb-0.5">
-                  08:00 · Antibiotikai
+                  Laikas užsiregistruoti
                 </div>
-                <div className="text-[11px] text-mu">Ryte prieš valgį</div>
+                <div className="text-[11px] text-mu">
+                  Gijimo galvutės uždėjimas
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr className="border-0 h-px bg-bd m-0" />
+
+      {/* 4. PEACE */}
+      <div className="max-w-[1140px] mx-auto py-14 md:py-20 px-5 md:px-[60px] grid md:grid-cols-2 gap-10 md:gap-20 items-center">
+        <div className="reveal">
+          <FeatNum>4. RAMYBĖ</FeatNum>
+          <h2 className="text-[28px] md:text-[42px] font-extrabold tracking-[-.03em] leading-[1.1] mb-[14px]">
+            Mažiau streso.
+            <br />
+            Daugiau pasitikėjimo.
+          </h2>
+          <p className="text-[15px] text-mu leading-[1.7] mb-6">
+            Žinodamas, kad viskas eina teisinga linkme, jauti ramybę kiekvieną
+            dieną. Nespėlioji — žinai.
+          </p>
+          <div className="flex flex-col gap-2.5">
+            <Bullet color="g" icon="✓">
+              <strong className="text-tx">Aiškus progresas</strong> — matai kiek
+              dienų praėjo ir kas laukia toliau
+            </Bullet>
+            <Bullet color="g" icon="✓">
+              <strong className="text-tx">Mažiau klaidų</strong> — padeda
+              išvengti pasikartojančių komplikacijų
+            </Bullet>
+            <Bullet color="g" icon="✓">
+              <strong className="text-tx">Gydytojas šalia</strong> — jo
+              rekomendacijos tavo telefone kiekvieną dieną
+            </Bullet>
+          </div>
+        </div>
+        <div className="reveal d1 flex justify-center items-center relative feat-radial">
+          <div className="illus-top relative bg-bg3 border border-bd2 rounded-[20px] p-7 overflow-hidden z-[1] w-full min-h-[300px] flex flex-col justify-center gap-5">
+            <div className="flex items-center gap-4">
+              <div className="flex flex-col items-center justify-center w-[72px] h-[72px] rounded-2xl bg-ac/10 border border-ac/20 flex-shrink-0">
+                <div className="text-[28px] font-extrabold text-ac leading-none tracking-[-.03em]">
+                  42
+                </div>
+                <div className="text-[9px] text-ac/70 mt-0.5 font-medium">
+                  diena
+                </div>
+              </div>
+              <div>
+                <div className="text-[11px] text-mu mb-0.5">Gijimo etapas</div>
+                <div className="text-[15px] font-bold tracking-[-.02em] leading-tight">
+                  Integracijos
+                  <br />
+                  fazė
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-2.5">
+              <div className="bg-ac/8 border border-ac/15 rounded-[12px] px-4 py-3">
+                <div className="text-[10px] text-ac font-semibold mb-0.5 uppercase tracking-[.06em]">
+                  Kas vyksta dabar?
+                </div>
+                <div className="text-[13px] text-tx">
+                  Implantas integruojasi į kaulą.
+                </div>
+              </div>
+              <div className="bg-gr/8 border border-gr/15 rounded-[12px] px-4 py-3">
+                <div className="text-[10px] text-gr font-semibold mb-0.5 uppercase tracking-[.06em]">
+                  Kas normalu?
+                </div>
+                <div className="text-[13px] text-tx">Jokio diskomforto.</div>
+              </div>
+              <div className="bg-yw/8 border border-yw/15 rounded-[12px] px-4 py-3">
+                <div className="text-[10px] text-yw font-semibold mb-0.5 uppercase tracking-[.06em]">
+                  Kas laukia toliau?
+                </div>
+                <div className="text-[13px] text-tx">
+                  Protezavimo etapas po 2 mėnesių.
+                </div>
               </div>
             </div>
           </div>
@@ -494,16 +570,10 @@ export default function Page() {
               </div>
 
               {[
-                ["🦷", "Implanto pasas", "Straumann · 14.05.2024", "bg-ac/15"],
-                ["🩻", "Rentgeno nuotraukos", "3 failai", "bg-rd/10"],
-                [
-                  "📄",
-                  "Gydymo informacija",
-                  "Operacijos ir vizitų istorija",
-                  "bg-gr/15",
-                ],
-                ["📋", "Sutikimai ir pažymos", "2 dokumentai", "bg-yw/15"],
-              ].map(([ico, label, sub, bg], i, arr) => (
+                ["checkmark.seal.text.page.fill", "text-ac", "Implanto pasas", "Straumann · 14.05.2024", "bg-ac/15"],
+                ["waveform.path.ecg.rectangle.fill", "text-rd", "Rentgeno nuotraukos", "3 failai", "bg-rd/10"],
+                ["text.document.fill", "text-gr", "Gydymo informacija", "Operacijos ir vizitų istorija", "bg-gr/15"],
+              ].map(([ico, tc, label, sub, bg], i, arr) => (
                 <div
                   key={label}
                   className={`flex items-center gap-2 py-2 ${
@@ -511,9 +581,9 @@ export default function Page() {
                   }`}
                 >
                   <div
-                    className={`w-7 h-7 rounded-lg ${bg} flex items-center justify-center text-[13px] flex-shrink-0`}
+                    className={`w-7 h-7 rounded-lg ${bg} ${tc} flex items-center justify-center flex-shrink-0`}
                   >
-                    {ico}
+                    <SFIcon name={ico} className="w-4 h-4" />
                   </div>
                   <div className="flex-1">
                     <div className="text-[10px] font-semibold text-tx leading-tight">
@@ -521,94 +591,36 @@ export default function Page() {
                     </div>
                     <div className="text-[9px] text-mu">{sub}</div>
                   </div>
-                  <div className="text-[11px] text-gr">›</div>
+                  <div className="text-[11px] text-mu2">›</div>
                 </div>
               ))}
             </div>
           </div>
         </div>
         <div className="reveal order-1 md:order-2">
-          <FeatNum>4. DOKUMENTAI</FeatNum>
+          <FeatNum>5. DOKUMENTAI</FeatNum>
           <h2 className="text-[28px] md:text-[42px] font-extrabold tracking-[-.03em] leading-[1.1] mb-[14px]">
             Viskas vienoje
             <br />
             vietoje
           </h2>
           <p className="text-[15px] text-mu leading-[1.7] mb-6">
-            Implanto pasas, rentgeno nuotraukos ir visa gydymo informacija –
-            visada po ranka.
+            Implanto pasas, rentgeno nuotraukos ir visa gydymo informacija —
+            informacija, kuri nepasimeta einant metams.
           </p>
           <div className="flex flex-col gap-2.5">
-            <Bullet color="b" icon="🦷">
-              <strong className="text-tx">Implanto pasas</strong> — gamintojas,
-              modelis, serijos numeris
+            <Bullet color="b" icon={<SFIcon name="checkmark.seal.text.page.fill" className="w-3 h-3" />}>
+              <strong className="text-tx">Implanto pasą saugome</strong> —
+              gamintojas, modelis, serijos numeris
             </Bullet>
-            <Bullet color="b" icon="🩻">
-              <strong className="text-tx">Rentgeno nuotraukos</strong> — prieš
-              ir po, visada pasiekiamos
+            <Bullet color="r" icon={<SFIcon name="waveform.path.ecg.rectangle.fill" className="w-3 h-3" />}>
+              <strong className="text-tx">Rentgeno nuotraukos</strong> — visada
+              pasiekiamos
             </Bullet>
-            <Bullet color="g" icon="📄">
+            <Bullet color="g" icon={<SFIcon name="text.document.fill" className="w-3 h-3" />}>
               <strong className="text-tx">Gydymo informacija</strong> —
               operacijų ir vizitų istorija
             </Bullet>
-            <Bullet color="y" icon="📋">
-              <strong className="text-tx">Sutikimai ir pažymos</strong> — visi
-              svarbūs dokumentai
-            </Bullet>
-          </div>
-        </div>
-      </div>
-
-      <hr className="border-0 h-px bg-bd m-0" />
-
-      {/* 6. PEACE */}
-      <div className="max-w-[1140px] mx-auto py-14 md:py-20 px-5 md:px-[60px] grid md:grid-cols-2 gap-10 md:gap-20 items-center">
-        <div className="reveal">
-          <FeatNum>5. RAMYBĖ</FeatNum>
-          <h2 className="text-[28px] md:text-[42px] font-extrabold tracking-[-.03em] leading-[1.1] mb-[14px]">
-            Mažiau streso.
-            <br />
-            Daugiau pasitikėjimo.
-          </h2>
-          <p className="text-[15px] text-mu leading-[1.7] mb-6">
-            Žinodamas, kad viskas eina teisinga linkme, jauti ramybę kiekvieną
-            dieną. Nespėlioji — žinai.
-          </p>
-          <div className="flex flex-col gap-2.5">
-            <Bullet color="g" icon="✓">
-              <strong className="text-tx">Aiškus progresas</strong> — matai kiek
-              dienų praėjo ir kas laukia toliau
-            </Bullet>
-            <Bullet color="g" icon="✓">
-              <strong className="text-tx">Mažiau klaidų</strong> — padeda
-              išvengti dažniausių gijimo klaidų
-            </Bullet>
-            <Bullet color="g" icon="✓">
-              <strong className="text-tx">Gydytojas šalia</strong> — jo
-              rekomendacijos tavo telefone kiekvieną dieną
-            </Bullet>
-          </div>
-        </div>
-        <div className="reveal d1 flex justify-center items-center relative feat-radial">
-          <div className="illus-top relative bg-bg3 border border-bd2 rounded-[20px] p-7 overflow-hidden z-[1] w-full min-h-[300px] flex flex-col justify-center items-center gap-4 text-center">
-            <div className="text-[56px] mb-2">😌</div>
-            <div className="text-xl font-bold tracking-[-.02em]">
-              Viskas pagal planą
-            </div>
-            <div className="text-sm text-mu max-w-[260px] leading-[1.6]">
-              Gijimas juda teisinga linkme. Šiandien nėra ko nerimauti.
-            </div>
-            <div className="flex flex-col gap-2 w-full max-w-[260px] mt-2">
-              <div className="bg-gr/10 border border-gr/20 rounded-[10px] px-[14px] py-2.5 flex items-center gap-2 text-[13px] text-gr text-start">
-                <span>✓</span> Tinimas mažėja — 3 dieną tai normalu
-              </div>
-              <div className="bg-gr/10 border border-gr/20 rounded-[10px] px-[14px] py-2.5 flex items-center gap-2 text-[13px] text-gr">
-                <span>✓</span> Antibiotikai vartojami laiku
-              </div>
-              <div className="bg-ac/10 border border-ac/20 rounded-[10px] px-[14px] py-2.5 flex items-center gap-2 text-[13px] text-[#8fa8ff]">
-                <span>📅</span> Sekantis etapas: ~7 dienos
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -625,13 +637,14 @@ export default function Page() {
             Tu ir tavo gydytojas –<br />
             viena komanda
           </h2>
-          <p className="reveal text-base text-mu max-w-[500px] mx-auto">
-            Tavo gydytojo rekomendacijos tavo telefone kiekvieną dieną.
+          <p className="reveal text-base text-mu max-w-[540px] mx-auto">
+            Programėlė, kuri kiekvienam pacientui aiškiai parodo, kurioje gydymo
+            stadijoje jis yra, kas vyksta dabar ir kas laukia toliau.
           </p>
         </div>
         <div id="gydytojams" className="reveal grid md:grid-cols-2 gap-5">
           <div className="aud-top relative bg-bg3 border border-bd rounded-[20px] p-8 overflow-hidden">
-            <div className="text-[32px] mb-3.5">📱</div>
+            <SFIcon name="person.fill" className="w-8 h-8 mb-3.5 text-mu" />
             <div className="text-xl font-bold mb-3 tracking-[-.02em]">
               Pacientams
             </div>
@@ -639,8 +652,11 @@ export default function Page() {
               {[
                 ["Mažiau nerimo", "ir spėliojimo kiekvieną dieną"],
                 ["Aiškūs nurodymai", "— kas normalu, ko vengti"],
-                ["Mažiau klaidų", "— skalavimas, kramtymas, krūvis"],
-                ["Patogumas", "ir kontrolė tavo telefone"],
+                ["Mažiau klaidų", "— higiena, kramtymas, krūvis"],
+                [
+                  "Saugome implanto pasą",
+                  "— informacija, kuri nepasimeta einant metams",
+                ],
                 ["Visa informacija", "vienoje vietoje visada"],
               ].map(([bold, rest], i) => (
                 <div
@@ -658,7 +674,7 @@ export default function Page() {
             </div>
           </div>
           <div className="aud-top aud-top-green relative bg-bg3 border border-bd rounded-[20px] p-8 overflow-hidden">
-            <div className="text-[32px] mb-3.5">🦷</div>
+            <SFIcon name="stethoscope" className="w-8 h-8 mb-3.5 text-mu" />
             <div className="text-xl font-bold mb-3 tracking-[-.02em]">
               Gydytojams
             </div>
@@ -666,7 +682,7 @@ export default function Page() {
               {[
                 ["Pacientas gerai laikosi", "rekomendacijų"],
                 ["Mažiau klausimų", "ir skambučių į kliniką"],
-                ["Geresni ilgalaikiai", "gydymo rezultatai"],
+                ["Geresni", "gijimo rezultatai"],
                 ["Ankstyvas komplikacijų", "nustatymas"],
                 ['Mažiau „dingusių"', "pacientų tarp vizitų"],
               ].map(([bold, rest], i) => (
@@ -701,22 +717,22 @@ export default function Page() {
         <div className="reveal grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             [
-              "📅",
+              "calendar",
               "Kasdieniai nurodymai",
               "Aiškiai žinok, ką daryti kiekviename gijimo etape",
             ],
             [
-              "🔔",
+              "bell.fill",
               "Išmanūs priminimai",
-              "Nepamiršk vaistų, skalavimo, vizitų ir kitų svarbių veiksmų",
+              "Nepamiršk vaistų, higienos, vizitų ir kitų svarbių veiksmų",
             ],
             [
-              "🛡️",
+              "shield.lefthalf.filled.badge.checkmark",
               "Aiškūs signalai",
               "Žinok, kas normalu, o kada verta pasitikrinti pas gydytoją",
             ],
             [
-              "📁",
+              "folder.fill",
               "Viskas vienoje vietoje",
               "Implanto pasas, nuotraukos, gydymo informacija visada su tavimi",
             ],
@@ -725,7 +741,7 @@ export default function Page() {
               key={title}
               className="bg-bg3 border border-bd rounded-2xl px-[18px] py-[22px] transition-all hover:border-ac/30 hover:-translate-y-[3px]"
             >
-              <div className="text-[22px] mb-3">{ico}</div>
+              <div className="mb-3 text-ac"><SFIcon name={ico} className="w-5 h-5" /></div>
               <div className="text-sm font-bold mb-1.5 leading-[1.3]">
                 {title}
               </div>
@@ -777,14 +793,13 @@ export default function Page() {
           <DownloadButtons centered />
         </div>
         <div className="reveal flex justify-center gap-6 flex-wrap mt-5 text-xs text-mu2">
-          <span className="flex items-center gap-1.5">🔒 Saugūs duomenys</span>
+          <span className="flex items-center gap-1.5"><SFIcon name="lock.fill" className="w-3 h-3" /> Saugūs duomenys</span>
           <span className="flex items-center gap-1.5">
-            ⭐ 4.9/5 įvertinimas
+            <SFIcon name="star.fill" className="w-3 h-3" /> 4.9/5 įvertinimas
           </span>
           <span className="flex items-center gap-1.5">
-            💳 Nereikia kortelės
+            <SFIcon name="creditcard.fill" className="w-3 h-3" /> Nemokama
           </span>
-          <span className="flex items-center gap-1.5">🆓 Nemokama visada</span>
         </div>
       </div>
 
