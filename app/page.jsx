@@ -196,7 +196,11 @@ export default function Page() {
             <div className="px-[14px] md:px-5 pt-4 md:pt-6 pb-[18px] md:pb-7">
               <div className="flex justify-center mb-2 md:mb-3">
                 <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-ac flex items-center justify-center">
-                  <svg viewBox="0 0 16 16" fill="none" className="w-5 h-5 md:w-6 md:h-6">
+                  <svg
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    className="w-5 h-5 md:w-6 md:h-6"
+                  >
                     <path
                       d="M3 8l3.5 3.5L13 5"
                       stroke="white"
@@ -212,13 +216,15 @@ export default function Page() {
               </div>
               <div className="bg-white/[.06] border border-white/[.10] rounded-[10px] px-3 md:px-4 py-2.5 md:py-3 mb-2 md:mb-3">
                 <div className="flex items-start gap-2 md:gap-3">
-                  <span className="text-[11px] md:text-[14px] flex-shrink-0 mt-0.5">💡</span>
+                  <span className="text-[11px] md:text-[14px] flex-shrink-0 mt-0.5">
+                    💡
+                  </span>
                   <div>
                     <div className="text-[9px] md:text-[12px] font-bold text-tx leading-[1.4] mb-0.5">
                       Patinimas 3–ią dieną — normalu.
                     </div>
                     <div className="text-[9px] md:text-[11px] text-mu leading-[1.5]">
-                      Didžiausias būna 2–3 dieną ir palaipsniui mažėja. Šaltas kompresas padės.
+                      Didžiausias būna 2–3 dieną ir palaipsniui mažėja.
                     </div>
                   </div>
                 </div>
@@ -236,7 +242,9 @@ export default function Page() {
                       i < arr.length - 1 ? "border-b border-white/[.05]" : ""
                     }`}
                   >
-                    <span className="text-[11px] md:text-[14px] flex-shrink-0">{ico}</span>
+                    <span className="text-[11px] md:text-[14px] flex-shrink-0">
+                      {ico}
+                    </span>
                     <span className="flex-1 text-[9px] md:text-[12px] text-tx font-medium">
                       {label}
                     </span>
@@ -252,7 +260,7 @@ export default function Page() {
           </div>
 
           {/* Phone 2 — always absolute, overlaps phone1 from bottom-right */}
-          <div className="iphone absolute right-0 bottom-0 md:bottom-4 w-[130px] md:w-[200px] opacity-55 z-[1]">
+          <div className="iphone absolute -right-4 md:-right-6 bottom-0 md:-bottom-2 w-[130px] md:w-[200px] opacity-55 z-[1]">
             <div className="px-[14px] pt-3 pb-[18px]">
               <div className="flex items-center justify-center gap-1 text-[9px] font-bold tracking-[.08em] uppercase text-ac mb-1.5">
                 <SFIcon name="bell.fill" className="w-[9px] h-[9px]" />
@@ -431,15 +439,24 @@ export default function Page() {
             Primename tai, kas labiausiai pasimirsta.
           </p>
           <div className="flex flex-col gap-2.5">
-            <Bullet color="b" icon={<SFIcon name="pills.fill" className="w-3 h-3" />}>
+            <Bullet
+              color="b"
+              icon={<SFIcon name="pills.fill" className="w-3 h-3" />}
+            >
               <strong className="text-tx">Antibiotikų priminimai</strong> — du
               kartus per dieną, tiksliu laiku
             </Bullet>
-            <Bullet color="y" icon={<SFIcon name="clock.fill" className="w-3 h-3" />}>
+            <Bullet
+              color="y"
+              icon={<SFIcon name="clock.fill" className="w-3 h-3" />}
+            >
               <strong className="text-tx">Higienos priminimai</strong> — kada
               pradėti skalauti, kaip valyti
             </Bullet>
-            <Bullet color="g" icon={<SFIcon name="calendar" className="w-3 h-3" />}>
+            <Bullet
+              color="g"
+              icon={<SFIcon name="calendar" className="w-3 h-3" />}
+            >
               <strong className="text-tx">Vizitų priminimai</strong> — gijimo
               galvutės uždėjimas, karūnėlė
             </Bullet>
@@ -570,9 +587,27 @@ export default function Page() {
               </div>
 
               {[
-                ["checkmark.seal.text.page.fill", "text-ac", "Implanto pasas", "Straumann · 14.05.2024", "bg-ac/15"],
-                ["waveform.path.ecg.rectangle.fill", "text-rd", "Rentgeno nuotraukos", "3 failai", "bg-rd/10"],
-                ["text.document.fill", "text-gr", "Gydymo informacija", "Operacijos ir vizitų istorija", "bg-gr/15"],
+                [
+                  "checkmark.seal.text.page.fill",
+                  "text-ac",
+                  "Implanto pasas",
+                  "Straumann · 14.05.2024",
+                  "bg-ac/15",
+                ],
+                [
+                  "waveform.path.ecg.rectangle.fill",
+                  "text-rd",
+                  "Rentgeno nuotraukos",
+                  "3 failai",
+                  "bg-rd/10",
+                ],
+                [
+                  "text.document.fill",
+                  "text-gr",
+                  "Gydymo informacija",
+                  "Operacijos ir vizitų istorija",
+                  "bg-gr/15",
+                ],
               ].map(([ico, tc, label, sub, bg], i, arr) => (
                 <div
                   key={label}
@@ -609,15 +644,34 @@ export default function Page() {
             informacija, kuri nepasimeta einant metams.
           </p>
           <div className="flex flex-col gap-2.5">
-            <Bullet color="b" icon={<SFIcon name="checkmark.seal.text.page.fill" className="w-3 h-3" />}>
+            <Bullet
+              color="b"
+              icon={
+                <SFIcon
+                  name="checkmark.seal.text.page.fill"
+                  className="w-3 h-3"
+                />
+              }
+            >
               <strong className="text-tx">Implanto pasą saugome</strong> —
               gamintojas, modelis, serijos numeris
             </Bullet>
-            <Bullet color="r" icon={<SFIcon name="waveform.path.ecg.rectangle.fill" className="w-3 h-3" />}>
+            <Bullet
+              color="r"
+              icon={
+                <SFIcon
+                  name="waveform.path.ecg.rectangle.fill"
+                  className="w-3 h-3"
+                />
+              }
+            >
               <strong className="text-tx">Rentgeno nuotraukos</strong> — visada
               pasiekiamos
             </Bullet>
-            <Bullet color="g" icon={<SFIcon name="text.document.fill" className="w-3 h-3" />}>
+            <Bullet
+              color="g"
+              icon={<SFIcon name="text.document.fill" className="w-3 h-3" />}
+            >
               <strong className="text-tx">Gydymo informacija</strong> —
               operacijų ir vizitų istorija
             </Bullet>
@@ -741,7 +795,9 @@ export default function Page() {
               key={title}
               className="bg-bg3 border border-bd rounded-2xl px-[18px] py-[22px] transition-all hover:border-ac/30 hover:-translate-y-[3px]"
             >
-              <div className="mb-3 text-ac"><SFIcon name={ico} className="w-5 h-5" /></div>
+              <div className="mb-3 text-ac">
+                <SFIcon name={ico} className="w-5 h-5" />
+              </div>
               <div className="text-sm font-bold mb-1.5 leading-[1.3]">
                 {title}
               </div>
@@ -793,7 +849,9 @@ export default function Page() {
           <DownloadButtons centered />
         </div>
         <div className="reveal flex justify-center gap-6 flex-wrap mt-5 text-xs text-mu2">
-          <span className="flex items-center gap-1.5"><SFIcon name="lock.fill" className="w-3 h-3" /> Saugūs duomenys</span>
+          <span className="flex items-center gap-1.5">
+            <SFIcon name="lock.fill" className="w-3 h-3" /> Saugūs duomenys
+          </span>
           <span className="flex items-center gap-1.5">
             <SFIcon name="star.fill" className="w-3 h-3" /> 4.9/5 įvertinimas
           </span>
