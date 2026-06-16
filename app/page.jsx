@@ -306,7 +306,7 @@ export default function Page() {
           </h2>
           <p className="text-[15px] text-mu leading-[1.7] mb-6">
             Nerimas, spėliojimas ir klaidos gali sulėtinti gijimą. Dauguma
-            pacientų nežino, kas normalu.
+            pacientų nežino, kas normalu, o kada jau kreiptis į gydytoją.
           </p>
         </div>
         <div className="reveal d1 flex justify-center items-center relative feat-radial">
@@ -316,8 +316,8 @@ export default function Page() {
             </div>
             {[
               "Ar normalu, kad skauda?",
+              "Ko negalima daryti?",
               "Koks sekantis etapas?",
-              "Kas bus toliau?",
             ].map((q) => (
               <div
                 key={q}
@@ -436,7 +436,7 @@ export default function Page() {
           </h2>
           <p className="text-[15px] text-mu leading-[1.7] mb-6">
             Laiku gausi priminimus apie vaistus, higieną ir svarbius veiksmus.
-            Primename tai, kas labiausiai pasimirsta.
+            Primename tai, kas labiausiai pasimiršta.
           </p>
           <div className="flex flex-col gap-2.5">
             <Bullet
@@ -640,7 +640,7 @@ export default function Page() {
             vietoje
           </h2>
           <p className="text-[15px] text-mu leading-[1.7] mb-6">
-            Implanto pasas, rentgeno nuotraukos ir visa gydymo informacija —
+            Implanto pasas, rentgeno nuotraukos ir gydymo istorija —
             informacija, kuri nepasimeta einant metams.
           </p>
           <div className="flex flex-col gap-2.5">
