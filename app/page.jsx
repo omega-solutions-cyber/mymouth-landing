@@ -875,6 +875,7 @@ export default function Page() {
         </div>
         <div className="flex gap-6">
           {[
+            ["Pagalba", "/help"],
             ["Privatumas", "/privacy"],
             ["Sąlygos", "/terms"],
           ].map(([l, href]) => (
