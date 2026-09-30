@@ -39,7 +39,7 @@ const ACCOUNT = [
   },
   {
     q: "Kaip ištrinti paskyrą?",
-    a: "Paskyrą galite bet kada ištrinti programėlės nustatymuose. Paskyros ištrynimas yra neatšaukiamas — prieš tai eksportuokite svarbius duomenis, pvz., implanto pasą. Ištrynus paskyrą, visi jūsų duomenys pašalinami pagal Privatumo politiką.",
+    a: "Paskyrą galite bet kada ištrinti programėlės nustatymuose. Paskyros ištrynimas yra neatšaukiamas — prieš tai eksportuokite svarbius duomenis, pvz., implanto pasą. Ištrynus paskyrą, visi jūsų duomenys pašalinami pagal Privatumo politiką. Išsamią instrukciją rasite puslapyje mymouth.app/delete-account.",
   },
   {
     q: "Ar gydytojas mato mano duomenis?",
@@ -119,7 +119,7 @@ export default function HelpPage() {
         <section>
           <h2 className="text-[24px] font-extrabold tracking-[-.03em] mb-5">Naudingos nuorodos</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            {[["Privatumo politika", "/privacy"], ["Naudojimosi sąlygos", "/terms"]].map(([l, href]) => (
+            {[["Privatumo politika", "/privacy"], ["Naudojimosi sąlygos", "/terms"], ["Paskyros ištrynimas", "/delete-account"]].map(([l, href]) => (
               <a
                 key={href}
                 href={href}
