@@ -55,7 +55,7 @@ function DownloadButtons({ centered }) {
       }`}
     >
       <a
-        href="#"
+        href="https://apps.apple.com/us/app/mymouth/id6799866816"
         className="dl-btn dl-btn-dark justify-center md:justify-start"
       >
         <AppleIcon />
@@ -67,7 +67,7 @@ function DownloadButtons({ centered }) {
         </span>
       </a>
       <a
-        href="#"
+        href="https://play.google.com/store/apps/details?id=com.app.mymouth"
         className="dl-btn dl-btn-outline justify-center md:justify-start"
       >
         <PlayIcon />
