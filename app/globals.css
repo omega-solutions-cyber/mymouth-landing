@@ -27,13 +27,6 @@
   }
   .btn-ghost:hover { border-color: #5b7fff; }
 
-  .btn-cta {
-    @apply h-12 px-[22px] border-0 rounded-[10px] text-[13px] font-bold text-white cursor-pointer transition-all;
-    background: linear-gradient(135deg, #5b7fff, #8b5fff);
-    box-shadow: 0 4px 16px rgba(91,127,255,.35);
-  }
-  .btn-cta:hover { opacity: .88; transform: translateY(-1px); }
-
   .dl-btn {
     @apply inline-flex items-center gap-[10px] h-[52px] px-[22px] rounded-xl text-sm font-bold cursor-pointer transition-all no-underline min-w-[160px];
   }

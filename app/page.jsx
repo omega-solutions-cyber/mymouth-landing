@@ -166,9 +166,6 @@ export default function Page() {
             </li>
           ))}
         </ul>
-        <div className="flex gap-[10px] items-center">
-          <button className="btn-cta">Atsisiųsti</button>
-        </div>
       </nav>
 
       {/* HERO */}
